@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Premier Schools Exhibition (PSE) — Discover Gurugram's Top 30+ schools all in one place. Apparel House, Sec 44, Gurugram on 2-3 August 2025.">
+  <title>Premier Schools Exhibition (PSE) — Discover Gurugram's Top 30+ Schools</title>
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <svg class="svg-sprite" aria-hidden="true">
+    <symbol id="icon-arrow" viewBox="0 0 16 16"><path d="M3 13L13 3M13 3H5M13 3V11" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-chevron-left" viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><polyline points="12 19 5 12 12 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-chevron-right" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><polyline points="12 5 19 12 12 19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+
+
+  <header class="nav" id="top">
+    <div class="nav__inner container">
+      <a href="/" class="nav__logo" aria-label="Premier Schools Exhibition — Home">
+        <img src="assets/logo.png" alt="Premier Schools Exhibition, 22nd Edition" width="84" height="76" fetchpriority="high">
+      </a>
+      <nav class="nav__actions" aria-label="Primary">
+        <a href="#enquire" class="btn btn--register">
+          <span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 16 16"><use href="#icon-arrow"/></svg></span>
+          <span class="btn__label">Register Now</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero">
+      <div class="hero__grid container">
+        <div class="hero__intro">
+          <h1 class="hero__headline">
+            <span class="hero__headline-sm">Discover Gurugram's</span>
+            <span class="hero__headline-lg">Top 30+ Schools</span>
+          </h1>
+          <p class="hero__subhead">ALL IN ONE PLACE</p>
+          <div class="hero__badge">
+            <div class="hero__badge-part">
+              <strong>Apparel House,</strong>
+              <span>Sec 44, Gurugram</span>
+            </div>
+            <span class="hero__badge-divider" aria-hidden="true"></span>
+            <div class="hero__badge-part">
+              <strong>2-3 August 2025</strong>
+              <span>Sat-Sun | 10AM - 6PM</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__scroll" aria-hidden="true">
+          <div class="hero__scroll-track"></div>
+        </div>
+
+        <div class="hero__form-wrap" id="enquire">
+          <form class="enquire" novalidate>
+            <h2 class="enquire__title">Enquire Now</h2>
+            <div class="enquire__field">
+              <label class="visually-hidden" for="parentName">Parent's Name</label>
+              <input class="enquire__input" type="text" id="parentName" name="parentName" placeholder="Parent's Name" autocomplete="name" required>
+              <span class="enquire__error" id="parentName-error" role="alert"></span>
+            </div>
+            <div class="enquire__field">
+              <label class="visually-hidden" for="phone">Phone number</label>
+              <input class="enquire__input" type="tel" id="phone" name="phone" placeholder="Phone number" autocomplete="tel" inputmode="tel" required>
+              <span class="enquire__error" id="phone-error" role="alert"></span>
+            </div>
+            <div class="enquire__field">
+              <label class="visually-hidden" for="grade">Which grade are you looking for?</label>
+              <textarea class="enquire__input enquire__input--textarea" id="grade" name="grade" placeholder="Which grade are you looking for?" rows="3" required></textarea>
+              <span class="enquire__error" id="grade-error" role="alert"></span>
+            </div>
+            <button class="btn btn--submit" type="submit">
+              <span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 16 16"><use href="#icon-arrow"/></svg></span>
+              <span class="btn__label">SUBMIT</span>
+            </button>
+            <p class="enquire__success" id="enquire-success" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Why parents trust us">
+      <ul class="stats__list container">
+        <li class="stats__item">
+          <span class="stats__content">
+            <span class="stats__label">Trusted by</span>
+            <span class="stats__num">1 Million+</span>
+            <span class="stats__label">Parents</span>
+          </span>
+        </li>
+        <li class="stats__item">
+          <span class="stats__content">
+            <span class="stats__num">22+</span>
+            <span class="stats__num-label">Years</span>
+            <span class="stats__label">of Legacy</span>
+          </span>
+        </li>
+        <li class="stats__item">
+          <span class="stats__content">
+            <span class="stats__num">500+</span>
+            <span class="stats__label">Participating</span>
+            <span class="stats__label">Schools</span>
+          </span>
+        </li>
+        <li class="stats__item">
+          <span class="stats__content">
+            <span class="stats__num">17 Cities</span>
+            <span class="stats__label">Across the</span>
+            <span class="stats__label">Globe</span>
+          </span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="schools" aria-label="Participating Schools">
+      <div class="container">
+        <h2 class="schools__title">Participating Schools</h2>
+      </div>
+      <div class="schools__track" data-direction="ltr" aria-hidden="true"></div>
+      <div class="schools__track" data-direction="rtl" aria-hidden="true"></div>
+      <ul class="visually-hidden">
+        <li>Harrow International School, Bengaluru</li>
+        <li>Shrewsbury International School, Bangkok</li>
+        <li>King's College India, Rohtak</li>
+        <li>Woodstock School (est. 1854)</li>
+        <li>The Aga Khan Academy, Mombasa</li>
+        <li>The International School Bangalore (TISB)</li>
+      </ul>
+    </section>
+
+    <section class="school-cards" aria-label="Choose the school that fits you best">
+      <div class="container">
+        <h2 class="section-title">Choose the School That Fits You Best</h2>
+        <div class="school-cards__viewport">
+          <div class="school-cards__track" role="list">
+            <article class="school-card" role="listitem">
+              <img class="school-card__img" src="assets/cards/preschool.png" alt="Children studying in a school library" loading="lazy" decoding="async">
+              <div class="school-card__overlay">
+                <h3 class="school-card__title">Pre-Schools &amp; Early Learning Centres</h3>
+                <p class="school-card__desc">Nurturing foundational skills for toddlers and pre-primary children.</p>
+              </div>
+            </article>
+            <article class="school-card" role="listitem">
+              <img class="school-card__img" src="assets/cards/cbse.png" alt="School student in uniform giving a thumbs up" loading="lazy" decoding="async">
+              <div class="school-card__overlay">
+                <h3 class="school-card__title">K–12 CBSE Day Schools</h3>
+                <p class="school-card__desc">Reputed schools offering complete schooling from Kindergarten to Grade 12.</p>
+              </div>
+            </article>
+            <article class="school-card" role="listitem">
+              <img class="school-card__img" src="assets/cards/heritage.png" alt="Student using a microscope in a science lab" loading="lazy" decoding="async">
+              <div class="school-card__overlay">
+                <h3 class="school-card__title">Heritage to New-Age Schools</h3>
+                <p class="school-card__desc">Time-tested schools to innovative pedagogy, tech enabled, future-ready schools.</p>
+              </div>
+            </article>
+            <article class="school-card" role="listitem">
+              <img class="school-card__img" src="assets/cards/international.png" alt="Students talking in an international school" loading="lazy" decoding="async">
+              <div class="school-card__overlay">
+                <h3 class="school-card__title">International Curriculum Schools</h3>
+                <p class="school-card__desc">Offering IB, Cambridge, Finnish and other global curricula with a global learning environment.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="school-cards__dots" role="tablist" aria-label="School category slides"></div>
+      </div>
+    </section>
+
+    <section class="preschedule" aria-label="Pre-schedule your appointments">
+      <div class="preschedule__text">
+        <p class="preschedule__eyebrow">Exciting Opportunities for Parents!</p>
+        <h2 class="preschedule__heading">Pre-schedule Your<br>School Appointments</h2>
+        <p class="preschedule__sub">To Avoid Rush</p>
+        <a href="#enquire" class="btn btn--register">
+          <span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 16 16"><use href="#icon-arrow"/></svg></span>
+          <span class="btn__label">PRE-SCHEDULE NOW</span>
+        </a>
+      </div>
+      <div class="preschedule__image-wrap">
+        <img class="preschedule__image" src="assets/preschedule.png" alt="Parents consulting with a school representative at the exhibition" loading="lazy" decoding="async">
+      </div>
+    </section>
+
+    <section class="exhibition" aria-label="What makes this exhibition a must-visit">
+      <div class="container">
+        <h2 class="exhibition__title">What Makes This Exhibition a Must-Visit</h2>
+        <div class="exhibition__viewport" role="region" aria-label="Exhibition highlights" aria-live="polite">
+          <div class="exhibition__track" role="list">
+            <article class="exhibition-card" role="listitem">
+              <img class="exhibition-card__icon" src="assets/icons/heads.png" alt="" width="56" height="56" loading="lazy" decoding="async">
+              <h3 class="exhibition-card__title">Interact Directly with School Heads</h3>
+              <p class="exhibition-card__desc">Get answers straight from the experts</p>
+            </article>
+            <article class="exhibition-card" role="listitem">
+              <img class="exhibition-card__icon" src="assets/icons/curriculum.png" alt="" width="56" height="56" loading="lazy" decoding="async">
+              <h3 class="exhibition-card__title">Compare Curriculum &amp; Pedagogy</h3>
+              <p class="exhibition-card__desc">Understand the differences between CBSE, ICSE, IB, Cambridge, Finnish &amp; more</p>
+            </article>
+            <article class="exhibition-card" role="listitem">
+              <img class="exhibition-card__icon" src="assets/icons/offers.png" alt="" width="56" height="56" loading="lazy" decoding="async">
+              <h3 class="exhibition-card__title">Get Exclusive Fee Structures &amp; Offers</h3>
+              <p class="exhibition-card__desc">Access transparent information and avail offers</p>
+            </article>
+            <article class="exhibition-card" role="listitem">
+              <img class="exhibition-card__icon" src="assets/icons/offerings.png" alt="" width="56" height="56" loading="lazy" decoding="async">
+              <h3 class="exhibition-card__title">Explore Schools Offerings</h3>
+              <p class="exhibition-card__desc">Preview infrastructure, co-curricular, teaching methodology and culture</p>
+            </article>
+            <article class="exhibition-card" role="listitem">
+              <img class="exhibition-card__icon" src="assets/icons/counselling.png" alt="" width="56" height="56" loading="lazy" decoding="async">
+              <h3 class="exhibition-card__title">On-the-spot Counselling</h3>
+              <p class="exhibition-card__desc">Save time on applications and get guidance</p>
+            </article>
+          </div>
+        </div>
+        <div class="exhibition__controls" role="group" aria-label="Slider controls">
+          <button class="exhibition__btn exhibition__btn--prev" type="button" aria-label="Previous slide">
+            <svg viewBox="0 0 24 24" width="20" height="20"><use href="#icon-chevron-left"/></svg>
+          </button>
+          <button class="exhibition__btn exhibition__btn--next" type="button" aria-label="Next slide">
+            <svg viewBox="0 0 24 24" width="20" height="20"><use href="#icon-chevron-right"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner container">
+      <div class="footer__col footer__col--logo">
+        <img src="assets/logo.png" alt="Premier Schools Exhibition" width="110" height="100" loading="lazy">
+      </div>
+      <div class="footer__col footer__col--info">
+        <img class="footer__icon" src="assets/icons/location.png" alt="" width="36" height="36" loading="lazy">
+        <div class="footer__content">
+          <p class="footer__head">Corporate Office:</p>
+          <address class="footer__address">
+            Suite B-5, Ballygunge Park Tower,<br>
+            67B Ballygunge Circular Road,<br>
+            Kolkata - 700019
+          </address>
+        </div>
+      </div>
+      <div class="footer__col footer__col--info">
+        <img class="footer__icon" src="assets/icons/location.png" alt="" width="36" height="36" loading="lazy">
+        <div class="footer__content">
+          <p class="footer__head">Ahmedabad Office:</p>
+          <address class="footer__address">
+            12/AA, Swastik Chambers, Near CU<br>
+            Shah College, Ashram Road,<br>
+            Ahmedabad - 380009
+          </address>
+        </div>
+      </div>
+      <div class="footer__col footer__col--info footer__col--phone">
+        <img class="footer__icon" src="assets/icons/phone.png" alt="" width="36" height="36" loading="lazy">
+        <div class="footer__content">
+          <p class="footer__head">Call us on</p>
+          <p class="footer__address">
+            <a href="tel:9674805912">9674805912</a><br>
+            <a href="tel:9674585012">9674585012</a>
+          </p>
+        </div>
+      </div>
+      <div class="footer__col footer__col--social">
+        <p class="footer__head footer__head--plain">Follow us on</p>
+        <ul class="footer__social">
+          <li><a href="#" aria-label="Instagram"><img src="assets/icons/instagram.png" alt="" width="40" height="40" loading="lazy"></a></li>
+          <li><a href="#" aria-label="Facebook"><img src="assets/icons/facebook.png" alt="" width="40" height="40" loading="lazy"></a></li>
+          <li><a href="#" aria-label="YouTube"><img src="assets/icons/youtube.png" alt="" width="40" height="40" loading="lazy"></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bar">
+      <p>Copyright &nbsp; 2025 | All rights reserved. &nbsp; Premier Schools Exhibition</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
