@@ -196,7 +196,8 @@
         track.style.transform = '';
         return;
       }
-      track.style.transform = `translate3d(${-index * 100}%, 0, 0)`;
+      const step = cards[1].getBoundingClientRect().left - cards[0].getBoundingClientRect().left;
+      track.style.transform = `translate3d(${-index * step}px, 0, 0)`;
       dots.forEach((d, i) => d.setAttribute('aria-selected', i === index));
     };
 
@@ -229,17 +230,21 @@
     let index = 0;
 
     const cardStep = () => {
-      const gap = 20;
-      const w = cards[0]?.offsetWidth || 0;
-      return w ? w + gap : gap;
+      return cards[1].getBoundingClientRect().left - cards[0].getBoundingClientRect().left;
     };
 
-    const visibleCards = () => Math.max(1, Math.floor((viewport.clientWidth + 20) / cardStep()));
-    const maxIndex = () => Math.max(0, cards.length - visibleCards());
+    const maxTravel = () => {
+      const lastCard = cards[cards.length - 1];
+      const contentWidth = lastCard.getBoundingClientRect().right - cards[0].getBoundingClientRect().left;
+      return Math.max(0, contentWidth - track.getBoundingClientRect().width);
+    };
+    const maxIndex = () => Math.ceil(maxTravel() / cardStep());
 
     const update = () => {
       index = Math.min(index, maxIndex());
-      track.style.transform = `translate3d(${-index * cardStep()}px, 0, 0)`;
+      // Clamp the last step so the final card fits without leaving empty space.
+      const travel = Math.min(index * cardStep(), maxTravel());
+      track.style.transform = `translate3d(${-travel}px, 0, 0)`;
       viewport.setAttribute('aria-label', `Exhibition highlights, showing slide ${index + 1} of ${maxIndex() + 1}`);
     };
 

@@ -338,6 +338,7 @@ address { font-style: normal; }
   width: 90%;
   height: auto;
   margin: 0 auto;
+  scroll-margin-top: 96px;
 }
 
 .enquire {
@@ -724,9 +725,9 @@ address { font-style: normal; }
 
 .exhibition__viewport {
   overflow: hidden;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  padding-left: max(var(--container-pad), calc((100vw - var(--container-max)) / 2 + var(--container-pad)));
+  width: auto;
+  margin-inline: calc(-1 * max(var(--container-pad), (100vw - var(--container-max)) / 2 + var(--container-pad)));
+  padding-inline: max(var(--container-pad), calc((100vw - var(--container-max)) / 2 + var(--container-pad)));
 }
 
 .exhibition__track {
@@ -892,24 +893,28 @@ address { font-style: normal; }
   .nav--scrolled .nav__logo img { height: 64px; margin-left: 0; }
 
   .btn__label { padding: 11px 16px; font-size: 0.72rem; }
+  .nav .btn__label { padding-inline: 10px; font-size: 0.68rem; white-space: nowrap; }
 
   .hero__scroll { height: 280px; }
   .hero__scroll-col--b { margin-top: 40px; }
-  .hero__badge { flex-wrap: wrap; gap: 12px; border-radius: 20px; padding: 12px 20px; }
+  .hero__headline-sm { font-size: clamp(1.75rem, 8vw, 2.5rem) !important; }
+  .hero__badge { flex-direction: column; gap: 12px; border-radius: 20px; padding: 12px 20px; }
+  .hero__badge-divider { display: none; }
   .enquire { padding: 28px 20px; }
 
   .stats { padding: 40px 0; }
+  .stats__list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 16px; }
 
   .stats__item {
-    flex: 0 1 calc(50% - 14px);
+    min-width: 0;
     min-height: 128px;
-    padding: 0 48px;
+    padding: 0 22px;
   }
 
   .stats__item::before,
-  .stats__item::after { width: 46px; height: 104px; }
+  .stats__item::after { width: 24px; height: 104px; }
 
-  .stats__num { font-size: 1.2rem; }
+  .stats__num { font-size: clamp(1rem, 4.8vw, 1.2rem); }
   .stats__num-label { font-size: 1.1rem; }
   .stats__label { font-size: 0.85rem; }
 
@@ -1005,6 +1010,14 @@ address { font-style: normal; }
   .footer__col--logo,
   .footer__col--info.footer__col--phone,
   .footer__col--social { grid-column: auto; grid-row: auto; }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .preschedule__text { max-width: 52%; padding-inline: 32px; }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .hero__badge { gap: 12px; padding-inline: 16px; }
 }
 
 @media (min-width: 1280px) {
