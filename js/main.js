@@ -23,17 +23,22 @@
     track.replaceChildren(...HERO_COLS.map((ids, i) => {
       const col = document.createElement('div');
       col.className = `hero__scroll-col hero__scroll-col--${labels[i]}`;
-      repeat(ids).forEach((id) => {
-        const img = document.createElement('img');
-        img.className = 'hero__capsule';
-        img.src = `assets/hero/${id}.png`;
-        img.width = 150;
-        img.height = 210;
-        img.alt = '';
-        img.decoding = 'async';
-        img.loading = 'eager';
-        col.appendChild(img);
-      });
+      for (let copy = 0; copy < 2; copy++) {
+        const group = document.createElement('div');
+        group.className = 'hero__scroll-group';
+        ids.forEach((id) => {
+          const img = document.createElement('img');
+          img.className = 'hero__capsule';
+          img.src = `assets/hero/${id}.png`;
+          img.width = 150;
+          img.height = 210;
+          img.alt = '';
+          img.decoding = 'async';
+          img.loading = 'eager';
+          group.appendChild(img);
+        });
+        col.appendChild(group);
+      }
       return col;
     }));
   }

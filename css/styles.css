@@ -312,15 +312,28 @@ address { font-style: normal; }
 .hero__scroll-col {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  animation: scrollUp 5s linear infinite;
+  flex: 1 1 0;
+  align-self: flex-start;
+  min-width: 0;
+  max-width: 150px;
+  animation: scrollUp 20s linear infinite;
   will-change: transform;
 }
 
-.hero__scroll-col--b { margin-top: 56px; }
+.hero__scroll-group {
+  display: flex;
+  flex-direction: column;
+  flex: none;
+  gap: 16px;
+  /* Include the seam gap so both repeated halves have exactly the same height. */
+  padding-bottom: 16px;
+}
+
+.hero__scroll-col--b { margin-top: -56px; animation-direction: reverse; }
 
 .hero__capsule {
-  width: clamp(110px, 28vw, 150px);
+  flex: none;
+  width: 100%;
   height: auto;
   filter: drop-shadow(0 12px 22px rgba(0, 0, 0, 0.35));
 }
@@ -328,11 +341,6 @@ address { font-style: normal; }
 @keyframes scrollUp {
   to { transform: translate3d(0, -50%, 0); }
 }
-
-/* .hero__scroll-track:hover .hero__scroll-col,
-.hero__scroll-track:focus-within .hero__scroll-col {
-  animation-play-state: paused;
-} */
 
 .hero__form-wrap{
   width: 90%;
@@ -896,7 +904,7 @@ address { font-style: normal; }
   .nav .btn__label { padding-inline: 10px; font-size: 0.68rem; white-space: nowrap; }
 
   .hero__scroll { height: 280px; }
-  .hero__scroll-col--b { margin-top: 40px; }
+  .hero__scroll-col--b { margin-top: -40px; }
   .hero__headline-sm { font-size: clamp(1.75rem, 8vw, 2.5rem) !important; }
   .hero__badge { flex-direction: column; gap: 12px; border-radius: 20px; padding: 12px 20px; }
   .hero__badge-divider { display: none; }
@@ -985,7 +993,7 @@ address { font-style: normal; }
   .hero__form-wrap { order: 0; }
 
   .hero__intro { text-align: left; }
-  .hero__scroll { height: 520px; overflow:visible; }
+  .hero__scroll { height: 600px; margin-block: -40px; }
   .school-cards__track { grid-template-columns: repeat(4, 1fr); }
 
   .exhibition-card {
